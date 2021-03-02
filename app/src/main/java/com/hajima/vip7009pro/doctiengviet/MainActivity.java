@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mSeekBarPitch.setProgress(70);
-        mSeekbarSpeed.setProgress(70);
+        mSeekBarPitch.setProgress(50);
+        mSeekbarSpeed.setProgress(50);
         int Permission_All =1;
         String[] Permissions  = {Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION};
         if(!hasPermission(this,Permissions))
