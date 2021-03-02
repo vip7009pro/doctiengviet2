@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Log.e("TTS", "Khởi tạo thất bại !");
+                    Log.e("TTS", "Khởi tạo giọng nói thất bại !");
                 }
             }
         });
