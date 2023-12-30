@@ -3,16 +3,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
 
     defaultConfig {
+        compileSdk 33
         applicationId "com.hajima.vip7009pro.doctiengviet"
         minSdkVersion 24
-        targetSdkVersion 30
-        versionCode 12
-        versionName "2.3"
-
+        targetSdkVersion 33
+        versionCode 21
+        versionName "3.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,6 +24,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.hajima.vip7009pro.doctiengviet'
 }
 
 dependencies {
@@ -40,7 +39,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.gms:play-services-ads:17.1.1'
+    implementation 'com.google.android.gms:play-services-ads:22.3.0'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
 
 }

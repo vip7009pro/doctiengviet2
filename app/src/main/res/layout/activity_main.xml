@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.889"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"/>
 
     <TextView
         android:id="@+id/textView"
@@ -123,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3947601238972543/4232177642"/>
+        app:adUnitId="ca-app-pub-2965911381053768/9108006700"/>
         <!-- app:adUnitId="ca-app-pub-3947601238972543/4232177642"/>-->
 
 

@@ -19,21 +19,17 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
-
 import com.hajima.vip7009pro.doctiengviet.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
-
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     String speakTextTxt;
     private AdView adView;
-    private InterstitialAd interstitialAd;
+
 
     public static boolean hasPermission(Context context, String... permissions )
     {
@@ -71,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -87,34 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
         AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
-        adView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                //Toast.makeText(MainActivity.this,"Ad loaded", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                 //Toast.makeText(MainActivity.this,"Ad load failed, ERROR CODE = " + errorCode, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                //Toast.makeText(MainActivity.this,"Ad opened", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                // Toast.makeText(MainActivity.this,"Ad left app", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdClosed() {
-                 //Toast.makeText(MainActivity.this,"Ad closed", Toast.LENGTH_SHORT).show();
-                // to the app after tapping on an ad.
-            }
-        });
 
         mSeekBarPitch.setProgress(50);
         mSeekbarSpeed.setProgress(50);
@@ -140,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    
+
                 }
             }
 
@@ -200,53 +168,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 saveVoice(mEditText.getText().toString());
-                interstitialAd = new InterstitialAd(MainActivity.this);
-                //interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-                interstitialAd.setAdUnitId("ca-app-pub-3947601238972543/3294500497");
-                interstitialAd.loadAd(new AdRequest.Builder().build());
                 show =1;
-
-
-                interstitialAd.setAdListener(new AdListener()
-                {
-                    @Override
-                    public void onAdLoaded() {
-                        //Toast.makeText(MainActivity.this,"interstitialAd loaded", Toast.LENGTH_SHORT).show();
-                        if(show ==1) { interstitialAd.show();}
-
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(int errorCode) {
-                        //Toast.makeText(MainActivity.this," interstitialAd load failed", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onAdOpened() {
-                        // Code to be executed when an ad opens an overlay that
-                         //Toast.makeText(MainActivity.this," interstitialAd opened", Toast.LENGTH_SHORT).show();
-                         show =0;
-                    }
-
-                    @Override
-                    public void onAdLeftApplication() {
-                         //Toast.makeText(MainActivity.this," interstitialAd left app", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onAdClosed() {
-                         //Toast.makeText(MainActivity.this," interstitialAd closed", Toast.LENGTH_SHORT).show();
-                        interstitialAd.loadAd(new AdRequest.Builder().build());
-                    }
-
-                    }
-
-
-                );
-
-
-
-
             }
         });
 
