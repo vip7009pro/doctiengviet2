@@ -1,6 +1,7 @@
 package com.hajima.vip7009pro.doctiengviet;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -39,18 +40,14 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar mSeekbarSpeed;
     public MediaPlayer mediaPlayer;
     public TextView tvlength;
-    private ImageButton imageButtonSpeak;
-    private ImageButton imageButtonSave;
-    private Button mShowMenuBt;
     public int show =0;
 
     String speakTextTxt;
-    private AdView adView;
 
 
     public static boolean hasPermission(Context context, String... permissions )
     {
-        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M && context != null && permissions != null)
+        if(context != null && permissions != null)
         {
             for(String permission: permissions)
             {
@@ -75,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         mSeekBarPitch = findViewById(R.id. seekBar);
         mSeekbarSpeed = findViewById(R.id.seekBar2);
         tvlength = findViewById(R.id.textlength);
-        imageButtonSpeak = findViewById(R.id.ImButtonSpeak);
-        imageButtonSave = findViewById(R.id.ImButtonSave);
-        adView = findViewById(R.id.adView);
-        mShowMenuBt = findViewById(R.id.btnShowMenu);
+        ImageButton imageButtonSpeak = findViewById(R.id.ImButtonSpeak);
+        ImageButton imageButtonSave = findViewById(R.id.ImButtonSave);
+        AdView adView = findViewById(R.id.adView);
+        Button mShowMenuBt = findViewById(R.id.btnShowMenu);
 
 
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -99,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 tvlength.setText("Độ Dài: "+s.length() +  "/4000");
@@ -128,10 +126,6 @@ public class MainActivity extends AppCompatActivity {
                     if(result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED)
                     {
                         Log.e("TTS", "Ngôn ngữ không được hõ trợ !");
-                    }
-                    else
-                    {
-
                     }
                 }
                 else
@@ -244,11 +238,7 @@ public class MainActivity extends AppCompatActivity {
         if(pitch<0.1) speed = 0.1f;
         mTTS.setPitch(pitch);
         mTTS.setSpeechRate(speed);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mTTS.speak(text,TextToSpeech.QUEUE_FLUSH,null,null);
-        } else {
-            mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-        }
+        mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null, null);
 
     }
 
