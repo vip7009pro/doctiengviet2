@@ -1,45 +1,82 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android' // Added Kotlin plugin
+}
+
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
 android {
+    namespace 'com.hajima.vip7009pro.doctiengviet'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
+    ndkVersion '27.0.12077973'
 
     defaultConfig {
-        compileSdk 34
         applicationId "com.hajima.vip7009pro.doctiengviet"
         minSdkVersion 24
-        targetSdkVersion 34
-        versionCode 21
-        versionName "3.2"
+        targetSdkVersion 36
+        versionCode 31
+        versionName "3.30"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'com.hajima.vip7009pro.doctiengviet'
+    kotlinOptions { // Added Kotlin options
+        jvmTarget = '1.8'
+    }
+    buildFeatures { // Added Compose build features
+        compose true
+        buildConfig true
+    }
+    composeOptions { // Added Compose options
+        kotlinCompilerExtensionVersion '1.5.10'
+    }
 }
 
 dependencies {
-
+    implementation 'androidx.core:core-ktx:1.13.1' // Added core-ktx
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment:2.7.7'
-    implementation 'androidx.navigation:navigation-ui:2.7.7'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.3'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3'
+
+    // Jetpack Compose dependencies
+    implementation 'androidx.compose.ui:ui:1.6.8'
+    implementation 'androidx.compose.material3:material3:1.2.1'
+    implementation 'androidx.compose.ui:ui-tooling-preview:1.6.8'
+    implementation 'androidx.activity:activity-compose:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.3'
+    debugImplementation 'androidx.compose.ui:ui-tooling:1.6.8' // Tooling for preview
+
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
-    implementation 'com.google.android.gms:play-services-ads:23.2.0'
-    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.6.8' // For Compose testing
 
+    implementation 'com.google.android.gms:play-services-ads:23.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 }

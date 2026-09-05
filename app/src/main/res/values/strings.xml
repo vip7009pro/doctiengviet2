@@ -12,4 +12,53 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="showmenutext">Show Menu</string>
+
+    <string name="hero_title">Doc Tieng Viet AI Voice</string>
+    <string name="hero_subtitle">Giong doc tu nhien hon, ho tro cloud voice va luu MP3 that.</string>
+
+    <string name="section_input">Noi dung van ban</string>
+    <string name="section_voice">Nha cung cap giong doc</string>
+    <string name="section_tuning">Tinh chinh am thanh</string>
+
+    <string name="input_hint">Nhap toi da 4000 ky tu...</string>
+    <string name="length_default">Do dai: 0/4000</string>
+    <string name="length_template">Do dai: %1$d/%2$d</string>
+    <string name="multiplier_template">%1$.2fx</string>
+
+    <string name="provider_local">Local (Offline)</string>
+    <string name="provider_azure">Azure Neural</string>
+    <string name="provider_status_local">Dang dung local TTS. Toc do nhanh, nhung chat giong thuong kem tu nhien.</string>
+    <string name="provider_status_azure">Dang dung Azure Neural TTS (free tier F0 co quota thang), giong tu nhien va luu MP3 tot hon.</string>
+
+    <string name="azure_api_key_hint">Azure API key</string>
+    <string name="azure_region_hint">Azure region (vi du: southeastasia)</string>
+    <string name="azure_voice_hint">Voice tieng Viet</string>
+
+    <string name="pitch_label">Do cao giong (Pitch)</string>
+    <string name="speed_label">Toc do doc (Speed)</string>
+
+    <string name="action_speak">Nghe thu</string>
+    <string name="action_save_mp3">Luu MP3</string>
+
+    <string name="azure_voice_hoai_my">Nữ miền Bắc - HoaiMy</string>
+    <string name="azure_voice_nam_minh">Nam miền Bắc - NamMinh</string>
+
+    <string name="toast_storage_permission_denied">Thiếu quyền lưu file vào Downloads</string>
+    <string name="toast_select_azure_for_mp3">Chọn Azure Neural để lưu MP3 chất lượng cao</string>
+    <string name="toast_local_tts_not_ready">Local TTS chưa sẵn sàng</string>
+    <string name="toast_input_empty">Nhập văn bản trước khi đọc</string>
+    <string name="toast_input_too_long">Văn bản vượt quá 4000 ký tự</string>
+    <string name="toast_missing_azure_key">Bạn chưa nhập Azure API Key</string>
+    <string name="toast_missing_azure_region">Bạn chưa nhập Azure region</string>
+    <string name="toast_cannot_play_audio">Không thể phát audio</string>
+    <string name="toast_azure_error">Azure TTS lỗi: %1$s</string>
+    <string name="toast_save_error">Lưu MP3 lỗi: %1$s</string>
+    <string name="toast_save_success">Đã lưu MP3: %1$s</string>
+
+    <string name="toast_fab_action">Replace with your own action</string>
+    <string name="home_placeholder">This is home fragment</string>
+    <string name="gallery_placeholder">This is gallery fragment</string>
+    <string name="slideshow_placeholder">This is slideshow fragment</string>
+
+    <string name="ad_unit_banner">ca-app-pub-2965911381053768/9108006700</string>
 </resources>
