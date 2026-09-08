@@ -62,3 +62,22 @@
     - Release AAB (Signed): `app/build/outputs/bundle/release/app-release.aab` (~12.25MB) - **File chính thức tải lên Google Play Console**.
     - Release APK (Signed): `app/build/outputs/apk/release/app-release.apk` (~13.18MB) - Đã ký bằng `doctiengviet.jks`.
     - Debug APK: `app/build/outputs/apk/debug/app-debug.apk` (~17.3MB).
+
+## Google Play Store Compliance (Privacy Policy)
+- **Date**: 2026-09-08
+- **Issue Addressed**:
+  - Rejection/Warning: *"App or developer details don’t match. Your privacy policy does not clearly identify the app, developer name, or legal entity associated with your Google Play store listing."*
+- **Action Taken**:
+  - Created [privacy_policy.html](file:///g:/NODEJS/doctiengviet2/privacy_policy.html) in the root directory.
+  - Explicitly declared matching identifiers in a dedicated top-level card:
+    - **App Name**: `Đọc Tiếng Việt 2.0` (also referenced as `Doc Tieng Viet 2.0`)
+    - **Package Name / Application ID**: `com.hajima.vip7009pro.doctiengviet`
+    - **Developer Name / Legal Entity**: `Hung Nguyen` (Store entity: `Hung Nguyen page` / `vip7009pro`)
+    - **Developer Contact Email**: `vip7009pro@gmail.com`
+    - **Play Store URL**: `https://play.google.com/store/apps/details?id=com.hajima.vip7009pro.doctiengviet`
+  - Comprehensive disclosures:
+    - Permission scoping (`INTERNET`, `WRITE_EXTERNAL_STORAGE maxSdkVersion="28"`).
+    - Integrated third parties: Google AdMob (`com.google.android.gms:play-services-ads`), Microsoft Azure Speech Services.
+    - Data retention, zero PII storage on custom servers, COPPA children's privacy statement.
+  - Interactive bilingual support (English for Google Play automated review bots, Vietnamese switch for local users).
+

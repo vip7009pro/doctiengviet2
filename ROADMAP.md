@@ -13,8 +13,11 @@
 - [x] Thực thi build Android App Bundle release (`:app:bundleRelease`) với `versionCode 31` thành công
 - [x] Cấu hình `signingConfigs.release` đọc từ `key.properties` và ký số thành công bằng `G:\NODEJS\doctiengviet.jks` (alias `doctiengviet`) cho cả AAB và APK release
 - [x] Cập nhật tài liệu kỹ thuật `CONTEXT.md` và hoàn tất roadmap
+- [x] Tạo file `privacy_policy.html` chuẩn chính sách Google Play Store (khắc phục triệt để lỗi "App or developer details don't match")
 
-## Kế hoạch tương lai
+## Kế hoạch tiếp theo / Phát hành
+- [ ] Đưa file `privacy_policy.html` lên hosting công khai (GitHub Pages / Firebase / Netlify) và dán link vào Google Play Console
 - [ ] Kiểm thử tương thích sâu trên Android 16 thực tế / emulator
 - [ ] Tối ưu hóa giao diện Jetpack Compose (Edge-to-Edge display cho Android 15/16)
 - [ ] Thêm các nhà cung cấp TTS khác ngoài Azure nếu có nhu cầu
+

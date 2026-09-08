@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Đọc Tiếng Việt 2.0</title>
+    <meta name="description" content="Privacy Policy for Đọc Tiếng Việt 2.0 (com.hajima.vip7009pro.doctiengviet) by developer Hung Nguyen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #eff6ff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header-bar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: #ffffff;
+            padding: 48px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-bar .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+            color: #ffffff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .header-bar h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 8px;
+        }
+
+        .header-bar p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: -28px auto 60px;
+            padding: 0 20px;
+        }
+
+        .lang-switch-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 16px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: #ffffff;
+            padding: 4px;
+            border-radius: 9999px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 6px 18px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            padding: 36px;
+            margin-bottom: 24px;
+        }
+
+        /* Identifier Box for Google Play compliance */
+        .identifier-box {
+            background: #ffffff;
+            border: 2px solid #2563eb;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            position: relative;
+        }
+
+        .identifier-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        .identifier-header .icon {
+            width: 32px;
+            height: 32px;
+            background: #eff6ff;
+            color: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .identifier-header h3 {
+            font-size: 1.15rem;
+            color: #1e3a8a;
+            font-weight: 700;
+        }
+
+        .identifier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .id-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+        }
+
+        .id-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .id-value {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #0f172a;
+            word-break: break-word;
+        }
+
+        .id-value a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .id-value a:hover {
+            text-decoration: underline;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .meta-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 1.1em;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.96rem;
+        }
+
+        li strong {
+            color: #1e293b;
+        }
+
+        .callout {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            color: #1e40af;
+            font-weight: 500;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Language content blocks */
+        .content-vi {
+            display: none;
+        }
+
+        body.lang-vi .content-vi {
+            display: block;
+        }
+
+        body.lang-vi .content-en {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 24px 18px;
+            }
+            .header-bar h1 {
+                font-size: 1.75rem;
+            }
+            .identifier-box {
+                padding: 18px 14px;
+            }
+        }
+    </style>
+</head>
+<body class="lang-en">
+
+    <header class="header-bar">
+        <div class="badge">Google Play Store Compliance</div>
+        <h1 class="content-en">Privacy Policy</h1>
+        <h1 class="content-vi">Chính Sách Bảo Mật</h1>
+        <p class="content-en">Official privacy policy for Đọc Tiếng Việt 2.0 (Doc Tieng Viet 2.0)</p>
+        <p class="content-vi">Chính sách bảo mật chính thức cho ứng dụng Đọc Tiếng Việt 2.0</p>
+    </header>
+
+    <main class="container">
+        <div class="lang-switch-wrapper">
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+                <button type="button" class="lang-btn" id="btn-vi" onclick="setLanguage('vi')">Tiếng Việt</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <!-- APP & DEVELOPER IDENTIFICATION CARD (Resolves Google Play Match Issue) -->
+            <section class="identifier-box" id="app-developer-identity">
+                <div class="identifier-header">
+                    <div class="icon">✓</div>
+                    <div>
+                        <h3 class="content-en">Application & Developer Identification Details</h3>
+                        <h3 class="content-vi">Thông Tin Định Danh Ứng Dụng & Nhà Phát Triển</h3>
+                    </div>
+                </div>
+
+                <div class="identifier-grid">
+                    <div class="id-item">
+                        <div class="id-label">Application Name</div>
+                        <div class="id-value">Đọc Tiếng Việt 2.0 <span style="font-weight:400; color:#64748b; font-size:0.85rem;">(Doc Tieng Viet 2.0)</span></div>
+                    </div>
+
+                    <div class="id-item">
+                        <div class="id-label">Package Name / Application ID</div>
+                        <div class="id-value"><code>com.hajima.vip7009pro.doctiengviet</code></div>
+                    </div>
+
+                    <div class="id-item">
+                        <div class="id-label">Developer / Legal Entity</div>
+                        <div class="id-value">Hung Nguyen <span style="font-weight:400; color:#64748b; font-size:0.85rem;">(Hung Nguyen page / vip7009pro)</span></div>
+                    </div>
+
+                    <div class="id-item">
+                        <div class="id-label">Developer Contact Email</div>
+                        <div class="id-value"><a href="mailto:vip7009pro@gmail.com">vip7009pro@gmail.com</a></div>
+                    </div>
+
+                    <div class="id-item" style="grid-column: 1 / -1;">
+                        <div class="id-label">Google Play Store Listing</div>
+                        <div class="id-value">
+                            <a href="https://play.google.com/store/apps/details?id=com.hajima.vip7009pro.doctiengviet" target="_blank" rel="noopener noreferrer">
+                                https://play.google.com/store/apps/details?id=com.hajima.vip7009pro.doctiengviet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="meta-info">
+                <span><strong>Effective Date:</strong> September 8, 2026</span>
+                <span><strong>Last Updated:</strong> September 8, 2026</span>
+                <span><strong>Target Platform:</strong> Android 7.0+ (API 24 to 36)</span>
+            </div>
+
+            <!-- ================= ENGLISH CONTENT ================= -->
+            <div class="content-en">
+                <h2>1. Overview and Scope</h2>
+                <p>
+                    This Privacy Policy strictly applies to the mobile application <strong>Đọc Tiếng Việt 2.0</strong> (Package Name: <code>com.hajima.vip7009pro.doctiengviet</code>), developed and published by <strong>Hung Nguyen</strong> (also associated with <em>Hung Nguyen page</em> and developer account <em>vip7009pro</em> on the Google Play Store).
+                </p>
+                <p>
+                    We respect your privacy and are committed to protecting it. This document explains what information is collected, how it is used, and the choices you have regarding your data when using our application.
+                </p>
+
+                <h2>2. Information Collection and Processing</h2>
+                <p>Our application functions primarily as an offline and cloud-assisted Vietnamese Text-To-Speech (TTS) synthesizer. We handle data in the following manners:</p>
+                <ul>
+                    <li>
+                        <strong>User-Provided Text:</strong> When you input text into the application for speech conversion, this text is processed locally by your device's built-in Text-To-Speech engine, or sent via an encrypted HTTPS connection to Microsoft Azure Speech Services if you choose the cloud Neural TTS option. We do not store, catalog, or transmit your text to any personal server.
+                    </li>
+                    <li>
+                        <strong>Generated Audio Files:</strong> Audio files (such as .mp3 files) created when you tap "Lưu MP3" (Save MP3) are generated and saved directly to your local device storage (Downloads folder or system MediaStore). These files remain entirely on your device under your control.
+                    </li>
+                    <li>
+                        <strong>No Personal Identifiable Information (PII):</strong> We do not require account registration, logins, phone numbers, real names, or credit card information to use the app.
+                    </li>
+                </ul>
+
+                <h2>3. Device Permissions and Usage</h2>
+                <p>To provide its core functionalities, the application requests the following Android system permissions:</p>
+                <ul>
+                    <li>
+                        <strong>INTERNET (<code>android.permission.INTERNET</code>):</strong> Required to fetch banner advertisements via Google AdMob, and to communicate with Microsoft Azure Cognitive Services REST API for synthesizing Vietnamese neural voices.
+                    </li>
+                    <li>
+                        <strong>WRITE EXTERNAL STORAGE (<code>android.permission.WRITE_EXTERNAL_STORAGE</code>):</strong> Applied solely on Android 9 (API 28) and lower (<code>android:maxSdkVersion="28"</code>) to allow saving generated .mp3 voice files to your external storage/Downloads folder. On Android 10+ (API 29 to 36), the application uses modern Scoped Storage and MediaStore APIs, requiring no legacy storage permissions.
+                    </li>
+                </ul>
+
+                <h2>4. Third-Party Services and Partners</h2>
+                <p>The application integrates reputable third-party SDKs that may collect certain device-level information as governed by their respective privacy policies:</p>
+                <ul>
+                    <li>
+                        <strong>Google AdMob (Google LLC):</strong> We use Google AdMob to display banner advertisements. Google AdMob may collect and process device identifiers (such as Google Advertising ID / GAID), approximate IP address, and interaction data to serve non-personalized or personalized advertisements and prevent fraud. For details on how Google processes your data, visit <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Policies</a>.
+                    </li>
+                    <li>
+                        <strong>Microsoft Azure Speech Services (Microsoft Corporation):</strong> When utilizing Azure Neural voices, input text is securely transmitted via TLS/HTTPS to Microsoft Azure Cognitive Services endpoints to generate the audio stream. This data is processed transiently according to <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.
+                    </li>
+                </ul>
+
+                <h2>5. Children's Privacy (COPPA Compliance)</h2>
+                <p>
+                    <strong>Đọc Tiếng Việt 2.0</strong> is not directed towards children under the age of 13. We do not knowingly collect or solicit any personal identification information from children. If we become aware that a child under 13 has provided personal information to us, we will take immediate steps to delete such information.
+                </p>
+
+                <h2>6. Data Retention and User Deletion Rights</h2>
+                <p>
+                    Because we do not store your personal data, text inputs, or generated audio files on our servers, there is no remote user data maintained. You maintain full ownership and control of all audio files saved on your device and may delete them at any time via any standard file manager.
+                </p>
+                <p>
+                    To reset your advertising identifier or opt out of personalized ads, you can adjust your device settings at: <em>Settings &rarr; Google &rarr; Ads &rarr; Reset advertising ID or Delete advertising ID</em>.
+                </p>
+
+                <h2>7. Security Measures</h2>
+                <p>
+                    We prioritize security. All communications between the app and third-party APIs (Google AdMob, Azure Speech API) are strictly transmitted over secure, encrypted HTTPS/TLS protocols.
+                </p>
+
+                <h2>8. Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. Any changes will be posted directly on this page with an updated "Last Updated" date. We encourage users to review this page periodically.
+                </p>
+
+                <h2>9. Contact Information</h2>
+                <p>
+                    If you have questions, feedback, or concerns regarding this Privacy Policy or developer matching identifiers, please contact the developer directly:
+                </p>
+                <ul>
+                    <li><strong>Developer Name:</strong> Hung Nguyen</li>
+                    <li><strong>Store Entity:</strong> Hung Nguyen page / vip7009pro</li>
+                    <li><strong>Application:</strong> Đọc Tiếng Việt 2.0 (com.hajima.vip7009pro.doctiengviet)</li>
+                    <li><strong>Email:</strong> <a href="mailto:vip7009pro@gmail.com">vip7009pro@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- ================= VIETNAMESE CONTENT ================= -->
+            <div class="content-vi">
+                <h2>1. Tổng Quan và Phạm Vi Áp Dụng</h2>
+                <p>
+                    Chính sách bảo mật này áp dụng trực tiếp và độc quyền cho ứng dụng di động <strong>Đọc Tiếng Việt 2.0</strong> (Mã gói ứng dụng: <code>com.hajima.vip7009pro.doctiengviet</code>), được phát triển và phát hành bởi nhà phát triển <strong>Hung Nguyen</strong> (pháp nhân liên kết <em>Hung Nguyen page</em> và tài khoản phát triển <em>vip7009pro</em> trên Google Play Store).
+                </p>
+                <p>
+                    Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu người dùng. Tài liệu này giải thích rõ thông tin nào được thu thập, mục đích sử dụng và các quyền hạn của bạn đối với dữ liệu khi sử dụng ứng dụng.
+                </p>
+
+                <h2>2. Thu Thập và Xử Lý Thông Tin</h2>
+                <p>Ứng dụng hoạt động với mục đích hỗ trợ đọc văn bản tiếng Việt thành giọng nói tự nhiên (Text-to-Speech). Phương thức xử lý dữ liệu như sau:</p>
+                <ul>
+                    <li>
+                        <strong>Nội dung văn bản nhập vào:</strong> Văn bản người dùng nhập vào ứng dụng chỉ được xử lý tạm thời để chuyển đổi thành âm thanh bằng công cụ TTS trên thiết bị hoặc thông qua kết nối mã hóa HTTPS đến Microsoft Azure Speech Services (khi bạn chọn giọng đọc Azure Neural). Chúng tôi không lưu trữ, không biên mục và không chuyển tiếp nội dung văn bản này về bất kỳ máy chủ cá nhân nào.
+                    </li>
+                    <li>
+                        <strong>Tệp âm thanh được tạo ra:</strong> Các tệp âm thanh định dạng .mp3 khi bạn chọn tính năng "Lưu MP3" sẽ được tạo và ghi trực tiếp vào bộ nhớ cục bộ của máy (thư mục Tải về / Downloads qua MediaStore). Người dùng có toàn quyền kiểm soát và quản lý các tệp này trên thiết bị.
+                    </li>
+                    <li>
+                        <strong>Không thu thập dữ liệu định danh cá nhân (PII):</strong> Ứng dụng không yêu cầu đăng ký tài khoản, không yêu cầu số điện thoại, tên thật, địa chỉ hay thông tin thẻ tín dụng.
+                    </li>
+                </ul>
+
+                <h2>3. Quyền Thiết Bị (Android Permissions)</h2>
+                <p>Để vận hành đầy đủ tính năng, ứng dụng yêu cầu các quyền hệ thống sau:</p>
+                <ul>
+                    <li>
+                        <strong>INTERNET (<code>android.permission.INTERNET</code>):</strong> Dùng để tải quảng cáo banner từ Google AdMob và kết nối với API Microsoft Azure Cognitive Services nhằm tổng hợp giọng đọc AI Neural.
+                    </li>
+                    <li>
+                        <strong>WRITE EXTERNAL STORAGE (<code>android.permission.WRITE_EXTERNAL_STORAGE</code>):</strong> Quyền này chỉ áp dụng giới hạn trên Android 9 (API 28) trở xuống (<code>android:maxSdkVersion="28"</code>) nhằm hỗ trợ lưu file MP3 vào thư mục tải về. Trên Android 10 trở lên (API 29 đến Android 16 - API 36), ứng dụng sử dụng cơ chế Scoped Storage và MediaStore API chuẩn của Android, hoàn toàn không cần quyền đọc/ghi bộ nhớ truyền thống.
+                    </li>
+                </ul>
+
+                <h2>4. Dịch Vụ và Đối Tác Thứ Ba</h2>
+                <p>Ứng dụng tích hợp các SDK đối tác uy tín, các đơn vị này có thể xử lý một số thông tin thiết bị theo chính sách riêng:</p>
+                <ul>
+                    <li>
+                        <strong>Google AdMob (Google LLC):</strong> Sử dụng để hiển thị quảng cáo banner. Google AdMob có thể thu thập ID quảng cáo (Google Advertising ID - GAID), thông tin thiết bị cơ bản và dữ liệu tương tác quảng cáo nhằm phục vụ phân phối quảng cáo và chống gian lận. Bạn có thể tham khảo thêm tại <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Chính sách quảng cáo của Google</a>.
+                    </li>
+                    <li>
+                        <strong>Microsoft Azure Speech Services (Microsoft Corporation):</strong> Khi sử dụng giọng đọc đám mây (Neural), văn bản được truyền tải an toàn qua kênh mã hóa HTTPS/TLS tới máy chủ Azure Cognitive Services để tạo âm thanh trả về và tuân thủ <a href="https://privacy.microsoft.com/vi-vn/privacystatement" target="_blank" rel="noopener noreferrer">Chính sách bảo mật Microsoft</a>.
+                    </li>
+                </ul>
+
+                <h2>5. Bảo Vệ Quyền Riêng Tư Của Trẻ Em</h2>
+                <p>
+                    Ứng dụng <strong>Đọc Tiếng Việt 2.0</strong> không hướng trực tiếp đến đối tượng trẻ em dưới 13 tuổi và không cố ý thu thập bất kỳ thông tin cá nhân nào từ trẻ em.
+                </p>
+
+                <h2>6. Lưu Trữ và Quyền Xóa Dữ Liệu</h2>
+                <p>
+                    Do chúng tôi không lưu trữ bất kỳ dữ liệu cá nhân hay file âm thanh nào trên máy chủ riêng, không có dữ liệu người dùng nào được duy trì trên đám mây của chúng tôi. Bạn có toàn quyền xóa các tệp âm thanh MP3 đã lưu bất kỳ lúc nào bằng các ứng dụng quản lý tệp trên điện thoại.
+                </p>
+                <p>
+                    Để đặt lại hoặc xóa mã nhận dạng quảng cáo (Advertising ID), bạn có thể truy cập: <em>Cài đặt thiết bị &rarr; Google &rarr; Quảng cáo &rarr; Đặt lại ID quảng cáo hoặc Xóa ID quảng cáo</em>.
+                </p>
+
+                <h2>7. An Toàn Thông Tin</h2>
+                <p>
+                    Mọi trao đổi dữ liệu với máy chủ của bên thứ ba (Google AdMob, Azure Speech API) đều bắt buộc thực hiện qua giao thức bảo mật cao cấp mã hóa SSL/TLS (HTTPS).
+                </p>
+
+                <h2>8. Cập Nhật Chính Sách</h2>
+                <p>
+                    Chính sách này có thể được điều chỉnh theo thời gian để phù hợp với các quy định mới của Google Play Store hoặc các nâng cấp tính năng. Mọi thay đổi sẽ được cập nhật trực tiếp tại trang này.
+                </p>
+
+                <h2>9. Thông Tin Liên Hệ</h2>
+                <p>
+                    Nếu bạn có bất kỳ câu hỏi nào liên quan đến chính sách bảo mật hoặc thông tin định danh nhà phát triển, vui lòng liên hệ trực tiếp:
+                </p>
+                <ul>
+                    <li><strong>Tên nhà phát triển (Developer Name):</strong> Hung Nguyen</li>
+                    <li><strong>Tên tài khoản phát hành (Store Entity):</strong> Hung Nguyen page / vip7009pro</li>
+                    <li><strong>Tên ứng dụng:</strong> Đọc Tiếng Việt 2.0 (com.hajima.vip7009pro.doctiengviet)</li>
+                    <li><strong>Email hỗ trợ:</strong> <a href="mailto:vip7009pro@gmail.com">vip7009pro@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-note">
+                &copy; 2026 Hung Nguyen. All rights reserved. Registered Package: com.hajima.vip7009pro.doctiengviet
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function setLanguage(lang) {
+            const body = document.body;
+            const btnEn = document.getElementById('btn-en');
+            const btnVi = document.getElementById('btn-vi');
+
+            if (lang === 'vi') {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-vi');
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+            } else {
+                body.classList.remove('lang-vi');
+                body.classList.add('lang-en');
+                btnEn.classList.add('active');
+                btnVi.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
